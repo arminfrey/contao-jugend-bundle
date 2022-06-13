@@ -1,0 +1,53 @@
+{
+    "name": "freyar/contao-jugend-bundle",
+    "description": "Erfassung der Jugendlichen in einem eigenen Modul, damit nicht jeder Zugriff hat.",
+    "keywords": [
+        "contao",
+        "bundle",
+        "tag 3",
+        "tag 4"
+    ],
+    "type": "contao-bundle",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Armin Frey",
+            "email": "webmaster@krettenweiber.de",
+            "homepage": "https://github.com/ArminFrey",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/freyar/contao-jugend-bundle/issues",
+        "source": "https://github.com/freyar/contao-jugend-bundle"
+    },
+    "require": {
+        "contao/core-bundle": "^4.9"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.3.1",
+        "contao/test-case": "^4.5",
+        "phpunit/phpunit": "^9.3",
+        "symfony/http-client": "5.4.*",
+        "symfony/phpunit-bridge": "^5.4",
+        "contao/easy-coding-standard": "^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Freyar\\ContaoJugendBundle\\": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config",
+            "src/Resources/contao/dca",
+            "src/Resources/contao/languages",
+            "src/Resources/contao/templates"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "Freyar\\ContaoJugendBundle\\ContaoManager\\Plugin"
+    },
+    "version": "1.0"
+}
