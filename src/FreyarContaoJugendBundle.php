@@ -12,15 +12,15 @@ declare(strict_types=1);
  * @link https://github.com/freyar/contao-jugend-bundle
  */
 
-namespace Freyar\ContaoJugendBundle;
+namespace Arminfrey\ContaoJugendBundle;
 
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 /**
- * Class FreyarContaoJugendBundle
+ * Class ArminfreyContaoJugendBundle
  */
-class FreyarContaoJugendBundle extends Bundle
+class ArminfreyContaoJugendBundle extends Bundle
 {
 	/**
 	 * {@inheritdoc}
