@@ -11,19 +11,19 @@
  */
 declare(strict_types=1);
 
-namespace Freyar\ContaoJugendBundle\Tests\ContaoManager;
+namespace Arminfrey\ContaoJugendBundle\Tests\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\DelegatingParser;
 use Contao\TestCase\ContaoTestCase;
-use Freyar\ContaoJugendBundle\ContaoManager\Plugin;
-use Freyar\ContaoJugendBundle\FreyarContaoJugendBundle;
+use Arminfrey\ContaoJugendBundle\ContaoManager\Plugin;
+use Arminfrey\ContaoJugendBundle\FreyarContaoJugendBundle;
 
 /**
  * Class PluginTest
  *
- * @package Freyar\ContaoJugendBundle\Tests\ContaoManager
+ * @package Arminfrey\ContaoJugendBundle\Tests\ContaoManager
  */
 class PluginTest extends ContaoTestCase
 {
@@ -47,7 +47,7 @@ class PluginTest extends ContaoTestCase
 
         $this->assertCount(1, $bundles);
         $this->assertInstanceOf(BundleConfig::class, $bundles[0]);
-        $this->assertSame(FreyarContaoJugendBundle::class, $bundles[0]->getName());
+        $this->assertSame(ArminfreyContaoJugendBundle::class, $bundles[0]->getName());
         $this->assertSame([ContaoCoreBundle::class], $bundles[0]->getLoadAfter());
     }
 
