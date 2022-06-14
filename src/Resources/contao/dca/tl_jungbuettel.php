@@ -99,7 +99,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
 		'sorting'                 => true,
 		'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
 		'inputType'               => 'text',
-		'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'tl_class'=>'w50'),
+		'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
 		'sql'                     => "varchar(255) NOT NULL default ''"
 	),
 	'lastname' => array
@@ -109,14 +109,14 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
 		'sorting'                 => true,
 		'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
 		'inputType'               => 'text',
-		'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'tl_class'=>'w50'),
+		'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'tl_class'=>'w50'),
 		'sql'                     => "varchar(255) NOT NULL default ''"
 	),
 	'dateOfBirth' => array
 	(
 		'exclude'                 => true,
 		'inputType'               => 'text',
-		'eval'                    => array('rgxp'=>'date', 'datepicker'=>true, 'feEditable'=>true, 'feViewable'=>true, 'tl_class'=>'w50 wizard'),
+		'eval'                    => array('rgxp'=>'date', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
 		'sql'                     => "varchar(11) NOT NULL default ''"
 	),
         'gender' => array
@@ -125,7 +125,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
 		'inputType'               => 'select',
 		'options'                 => array('male', 'female', 'other'),
 		'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-		'eval'                    => array('includeBlankOption'=>true, 'feEditable'=>true, 'feViewable'=>true, 'tl_class'=>'w50'),
+		'eval'                    => array('includeBlankOption'=>true, 'tl_class'=>'w50'),
 		'sql'                     => "varchar(32) NOT NULL default ''"
 	),
         'guardian'    => array
@@ -135,9 +135,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
             'search'    => true,
             'filter'    => true,
             'sorting'   => true,
-            'reference' => $GLOBALS['TL_LANG']['tl_member'],
-            //'options'   => array('firstoption', 'secondoption'),
-            'foreignKey'            => 'tl_member.lastname',
+            'foreignKey'            => 'tl_member.CONCAT(firstname,' ',lastname)',
             //'options_callback'      => array('CLASS', 'METHOD'),
             'eval'      => array('includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'),
             'sql'       => "varchar(255) NOT NULL default ''"
