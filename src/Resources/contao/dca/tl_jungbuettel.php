@@ -28,8 +28,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
         'sql'              => array(
             'keys' => array(
                 'id' => 'primary',
-                'vorname' => 'unique',
-                'nachname' => 'unique'
+                'vorname, nachname' => 'unique'
             )
         ),
     ),
@@ -147,7 +146,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
             'foreignKey'            => 'tl_member.lastname',
             //'options_callback'      => array('CLASS', 'METHOD'),
             'eval'      => array('includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'),
-            'sql'       => "varchar(255) NOT NULL default ''",
+            'sql'       => "varchar(255) NOT NULL default ''"
             //'relation'  => array('type' => 'hasOne', 'load' => 'lazy')
         )
     )
