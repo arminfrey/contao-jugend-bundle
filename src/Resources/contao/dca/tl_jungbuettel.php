@@ -84,13 +84,13 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
     ),
     // Palettes
     'palettes'    => array(
-        '__selector__' => array('addSubpalette'),
-        'default'      => '{first_legend},firstname,lastname,dateOfBirth,selectField,checkboxField,multitextField;{second_legend},addSubpalette'
+        //'__selector__' => array('addSubpalette'),
+        'default'      => '{first_legend},firstname,lastname,dateOfBirth,gender,guardian'
     ),
     // Subpalettes
-    'subpalettes' => array(
-        'addSubpalette' => 'textareaField',
-    ),
+    //'subpalettes' => array(
+    //    'addSubpalette' => 'textareaField',
+    //),
     // Fields
     'fields'      => array(
         'id'             => array(
@@ -100,42 +100,43 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
             'sql' => "int(10) unsigned NOT NULL default '0'"
         ),
         'firstname' => array
-		(
-			'exclude'                 => true,
-			'search'                  => true,
-			'sorting'                 => true,
-			'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-			'sql'                     => "varchar(255) NOT NULL default ''"
-		),
-		'lastname' => array
-		(
-			'exclude'                 => true,
-			'search'                  => true,
-			'sorting'                 => true,
-			'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
-			'inputType'               => 'text',
-			'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-			'sql'                     => "varchar(255) NOT NULL default ''"
-		),
-		'dateOfBirth' => array
-		(
-			'exclude'                 => true,
-			'inputType'               => 'text',
-			'eval'                    => array('rgxp'=>'date', 'datepicker'=>true, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50 wizard'),
-			'sql'                     => "varchar(11) NOT NULL default ''"
-		),
+	(
+		'exclude'                 => true,
+		'search'                  => true,
+		'sorting'                 => true,
+		'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+		'inputType'               => 'text',
+		'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+		'sql'                     => "varchar(255) NOT NULL default ''"
+	),
+	'lastname' => array
+	(
+		'exclude'                 => true,
+		'search'                  => true,
+		'sorting'                 => true,
+		'flag'                    => DataContainer::SORT_INITIAL_LETTER_ASC,
+		'inputType'               => 'text',
+		'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+		'sql'                     => "varchar(255) NOT NULL default ''"
+	),
+	'dateOfBirth' => array
+	(
+		'exclude'                 => true,
+		'inputType'               => 'text',
+		'eval'                    => array('rgxp'=>'date', 'datepicker'=>true, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50 wizard'),
+		'sql'                     => "varchar(11) NOT NULL default ''"
+	),
         'gender' => array
-		(
-			'exclude'                 => true,
-			'inputType'               => 'select',
-			'options'                 => array('male', 'female', 'other'),
-			'reference'               => &$GLOBALS['TL_LANG']['MSC'],
-			'eval'                    => array('includeBlankOption'=>true, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
-			'sql'                     => "varchar(32) NOT NULL default ''"
-		),
-        'guardian'    => array(
+	(
+		'exclude'                 => true,
+		'inputType'               => 'select',
+		'options'                 => array('male', 'female', 'other'),
+		'reference'               => &$GLOBALS['TL_LANG']['MSC'],
+		'eval'                    => array('includeBlankOption'=>true, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+		'sql'                     => "varchar(32) NOT NULL default ''"
+	),
+        'guardian'    => array
+	(
             'inputType' => 'select',
             'exclude'   => true,
             'search'    => true,
