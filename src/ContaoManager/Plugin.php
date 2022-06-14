@@ -26,7 +26,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create('Arminfrey\ContaoJugendBundle\FreyarContaoJugendBundle')
+            BundleConfig::create('Arminfrey\ContaoJugendBundle\ArminfreyContaoJugendBundle')
                 ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle']),
         ];
     }
