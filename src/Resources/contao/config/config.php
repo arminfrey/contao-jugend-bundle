@@ -10,7 +10,7 @@
  * @link https://github.com/freyar/contao-jugend-bundle
  */
 
-use Freyar\ContaoJugendBundle\Model\JungbuettelModel;
+use Arminfrey\ContaoJugendBundle\Model\JungbuettelModel;
 
 /**
  * Backend modules
