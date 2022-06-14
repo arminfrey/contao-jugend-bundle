@@ -16,7 +16,6 @@ declare(strict_types=1);
  * Legends
  */
 $GLOBALS['TL_LANG']['tl_jungbuettel']['first_legend'] = "Basis Einstellungen";
-$GLOBALS['TL_LANG']['tl_jungbuettel']['second_legend'] = "Erweiterte Einstellungen";
 
 /**
  * Operations
@@ -32,6 +31,7 @@ $GLOBALS['TL_LANG']['tl_jungbuettel']['show'] = ["Datensatz mit ID: %s ansehen",
 $GLOBALS['TL_LANG']['tl_jungbuettel']['firstname'] = ["Vorname", "Vorname"];
 $GLOBALS['TL_LANG']['tl_jungbuettel']['lastname'] = ["Nachname", "Nachname"];
 $GLOBALS['TL_LANG']['tl_jungbuettel']['dateOfBirth'] = ["Geburtsdatum", "Geburtsdatum"];
+$GLOBALS['TL_LANG']['tl_jungbuettel']['gender'] = ["Geschlecht", "Geschlecht"];
 $GLOBALS['TL_LANG']['tl_jungbuettel']['guardian'] = ["Erziehungsberechtigter", "Bitte den Erziehungsberechtigten auswählen"];
 
 /**
