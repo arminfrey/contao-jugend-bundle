@@ -48,6 +48,5 @@
     },
     "extra": {
         "contao-manager-plugin": "Arminfrey\\ContaoJugendBundle\\ContaoManager\\Plugin"
-    },
-    "version": "1.0"
+    }
 }
