@@ -27,8 +27,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
         'enableVersioning' => true,
         'sql'              => array(
             'keys' => array(
-                'id' => 'primary',
-                'vorname, nachname' => 'unique'
+                'id' => 'primary'
             )
         ),
     ),
