@@ -12,14 +12,14 @@ declare(strict_types=1);
  * @link https://github.com/freyar/contao-jugend-bundle
  */
 
-namespace Freyar\ContaoJugendBundle\Model;
+namespace Arminfrey\ContaoJugendBundle\Model;
 
 use Contao\Model;
 
 /**
  * Class JungbuettelModel
  *
- * @package Freyar\ContaoJugendBundle\Model
+ * @package Arminfrey\ContaoJugendBundle\Model
  */
 class JungbuettelModel extends Model
 {

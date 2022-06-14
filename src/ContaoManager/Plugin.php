@@ -12,7 +12,7 @@ declare(strict_types=1);
  * @link https://github.com/freyar/contao-jugend-bundle
  */
 
-namespace Freyar\ContaoJugendBundle\ContaoManager;
+namespace Arminfrey\ContaoJugendBundle\ContaoManager;
 
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
@@ -26,7 +26,7 @@ class Plugin implements BundlePluginInterface
     public function getBundles(ParserInterface $parser): array
     {
         return [
-            BundleConfig::create('Freyar\ContaoJugendBundle\FreyarContaoJugendBundle')
+            BundleConfig::create('Arminfrey\ContaoJugendBundle\FreyarContaoJugendBundle')
                 ->setLoadAfter(['Contao\CoreBundle\ContaoCoreBundle']),
         ];
     }

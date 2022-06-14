@@ -12,7 +12,7 @@ declare(strict_types=1);
  * @link https://github.com/freyar/contao-jugend-bundle
  */
 
-namespace Freyar\ContaoJugendBundle\DependencyInjection;
+namespace Arminfrey\ContaoJugendBundle\DependencyInjection;
 
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -20,9 +20,9 @@ use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
- * Class FreyarContaoJugendExtension
+ * Class ArminfreyContaoJugendExtension
  */
-class FreyarContaoJugendExtension extends Extension
+class ArminfreyContaoJugendExtension extends Extension
 {
 
     /**
