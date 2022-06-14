@@ -1,5 +1,5 @@
 {
-    "name": "freyar/contao-jugend-bundle",
+    "name": "arminfrey/contao-jugend-bundle",
     "description": "Erfassung der Jugendlichen in einem eigenen Modul, damit nicht jeder Zugriff hat.",
     "keywords": [
         "contao",
@@ -13,13 +13,13 @@
         {
             "name": "Armin Frey",
             "email": "webmaster@krettenweiber.de",
-            "homepage": "https://github.com/ArminFrey",
+            "homepage": "https://github.com/arminfrey",
             "role": "Developer"
         }
     ],
     "support": {
-        "issues": "https://github.com/freyar/contao-jugend-bundle/issues",
-        "source": "https://github.com/freyar/contao-jugend-bundle"
+        "issues": "https://github.com/arminfrey/contao-jugend-bundle/issues",
+        "source": "https://github.com/arminfrey/contao-jugend-bundle"
     },
     "require": {
         "contao/core-bundle": "^4.9"
@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Freyar\\ContaoJugendBundle\\": "src/"
+            "Arminfrey\\ContaoJugendBundle\\": "src/"
         },
         "classmap": [
             "src/Resources/contao"
@@ -47,7 +47,7 @@
         ]
     },
     "extra": {
-        "contao-manager-plugin": "Freyar\\ContaoJugendBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Arminfrey\\ContaoJugendBundle\\ContaoManager\\Plugin"
     },
     "version": "1.0"
 }
