@@ -1,3 +1,5 @@
 Jungbüttelmodul
 
-sehr speziell, deshalb Privat.
+sehr speziell.
+
+Zum Erfassen von Jugendlichen in einem Verein mit Erziheungsberechtigtem.
