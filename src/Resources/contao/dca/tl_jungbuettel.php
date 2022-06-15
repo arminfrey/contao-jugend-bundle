@@ -45,9 +45,8 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
         ),
 	'label' => array
 	(
-		'fields'                  => array('lastname', 'firstname', 'guardian'),
+		'fields'                  => array('lastname', 'firstname', 'guardian:tl_member.lastname'),
 		'showColumns'             => true,
-		'label_callback'          => array('tl_jungbuettel', 'addIcon')
 	),
         'global_operations' => array(
             'all' => array(
