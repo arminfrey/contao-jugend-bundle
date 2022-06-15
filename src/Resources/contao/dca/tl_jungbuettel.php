@@ -136,7 +136,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
             'filter'    => true,
             'sorting'   => true,
             //'foreignKey'            => 'tl_member.CONCAT(firstname," ",lastname)',
-	    'foreignKey =>  ['member:tl_member.CONCAT(lastname,",",firstname)'],
+	    'foreignKey =>  ['member:tl_member.CONCAT(lastname,', ',firstname)'],
             'eval'      => array('includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'),
             'sql'       => "varchar(255) NOT NULL default ''"
             //'relation'  => array('type' => 'hasOne', 'load' => 'lazy')
