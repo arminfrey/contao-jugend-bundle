@@ -39,10 +39,16 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
     'list'        => array(
         'sorting'           => array(
             'mode'        => 2,
-            'fields'      => array('lastname','firstname','guardian'),
+            'fields'      => array('lastname'),
             'flag'        => 1,
             'panelLayout' => 'filter;sort,search,limit'
         ),
+	'label' => array
+	(
+		'fields'                  => array('lastname', 'firstname', 'guardian'),
+		'showColumns'             => true,
+		'label_callback'          => array('tl_jungbuettel', 'addIcon')
+	),
         'global_operations' => array(
             'all' => array(
                 'label'      => &$GLOBALS['TL_LANG']['MSC']['all'],
