@@ -39,7 +39,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
     'list'        => array(
         'sorting'           => array(
             'mode'        => 2,
-            'fields'      => array('id'),
+            'fields'      => array('lastname','firstname','guardian'),
             'flag'        => 1,
             'panelLayout' => 'filter;sort,search,limit'
         ),
