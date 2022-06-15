@@ -43,10 +43,6 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
             'flag'        => 1,
             'panelLayout' => 'filter;sort,search,limit'
         ),
-        'label'             => array(
-            'fields' => array('title'),
-            'format' => '%s',
-        ),
         'global_operations' => array(
             'all' => array(
                 'label'      => &$GLOBALS['TL_LANG']['MSC']['all'],
