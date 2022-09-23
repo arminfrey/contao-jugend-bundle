@@ -178,6 +178,6 @@ class tl_thtp_days extends Backend
 	 */
 	public function listDates($arrRow)
 	{
-		return date('d.m.Y',$arrRow['dateOfBirth']);
+		return date('d.m.Y',strtotime($arrRow['dateOfBirth']));
 	}
 }
