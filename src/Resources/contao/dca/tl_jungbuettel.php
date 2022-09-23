@@ -168,7 +168,7 @@ class tl_jungbuettel extends Backend
 }
 
 
-lass tl_thtp_days extends Backend
+class tl_thtp_days extends Backend
 {
 
 	/**
