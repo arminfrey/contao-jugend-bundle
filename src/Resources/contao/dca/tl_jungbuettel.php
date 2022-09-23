@@ -39,13 +39,13 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
     'list'        => array(
         'sorting'           => array(
             'mode'        => 2,
-            'fields'      => array('lastname'),
-            'flag'        => 1,
+            'fields'      => array('dateOfBirth'),
+            'flag'        => 2,
             'panelLayout' => 'filter;sort,search,limit'
         ),
 	'label' => array
 	(
-		'fields'                  => array('lastname', 'firstname', 'guardian:tl_member.lastname'),
+		'fields'                  => array('lastname', 'firstname', 'guardian:tl_member.lastname', 'dateOfBirth'),
 		'showColumns'             => true,
 	),
         'global_operations' => array(
