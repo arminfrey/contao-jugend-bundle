@@ -39,14 +39,15 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
     'list'        => array(
         'sorting'           => array(
             'mode'        => 2,
-            'fields'      => array('lastname'),
-            'flag'        => 1,
+            'fields'      => array('dateOfBirth'),
+            'flag'        => 7,
             'panelLayout' => 'filter;sort,search,limit'
         ),
 	'label' => array
 	(
-		'fields'                  => array('lastname', 'firstname', 'guardian:tl_member.lastname', date('d.m.Y',dateOfBirth)),
+		'fields'                  => array('lastname', 'firstname', 'guardian:tl_member.lastname', 'dateOfBirth'),
 		'showColumns'             => true,
+		'label_callback'          => array('tl_thtp_days', 'listDates')
 	),
         'global_operations' => array(
             'all' => array(
@@ -164,4 +165,19 @@ class tl_jungbuettel extends Backend
 
         return $arrButtons;
     }
+}
+
+
+lass tl_thtp_days extends Backend
+{
+
+	/**
+	 * List a particular record
+	 * @param array
+	 * @return string
+	 */
+	public function listDates($arrRow)
+	{
+		return date('d.m.Y',$arrRow['dateOfBirth']);
+	}
 }
