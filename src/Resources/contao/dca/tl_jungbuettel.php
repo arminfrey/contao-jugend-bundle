@@ -114,6 +114,8 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
 	),
 	'dateOfBirth' => array
 	(
+		'exclude'                 => true,
+		'inputType'               => 'text',
 		'default'                 => time(),
 		'sorting'                 => true,
 		'flag'                    => DataContainer::SORT_DAY_DESC,
