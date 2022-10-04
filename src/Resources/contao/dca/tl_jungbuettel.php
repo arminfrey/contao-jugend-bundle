@@ -40,7 +40,6 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
         'sorting'           => array(
             'mode'        => DataContainer::MODE_SORTABLE,
             'fields'      => array('dateOfBirth'),
-            'flag'        => 7,
             'panelLayout' => 'filter;sort,search,limit'
         ),
 	'label' => array
