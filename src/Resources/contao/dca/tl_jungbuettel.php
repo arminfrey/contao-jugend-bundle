@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
     ),
     'list'        => array(
         'sorting'           => array(
-            'mode'        => => DataContainer::MODE_SORTABLE,
+            'mode'        => DataContainer::MODE_SORTABLE,
             'fields'      => array('dateOfBirth'),
             'flag'        => 7,
             'panelLayout' => 'filter;sort,search,limit'
@@ -120,7 +120,6 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
 		'sorting'                 => true,
 		'flag'                    => DataContainer::SORT_DAY_DESC,
 		'eval'                    => array('rgxp'=>'datim', 'doNotCopy'=>true),
-		'eval'                    => array('rgxp'=>'date', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
 		'sql'                     => "varchar(11) NOT NULL default ''"
 	),
         'gender' => array
