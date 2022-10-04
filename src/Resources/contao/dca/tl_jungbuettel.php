@@ -38,7 +38,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
     ),
     'list'        => array(
         'sorting'           => array(
-            'mode'        => 2,
+            'mode'        => => DataContainer::MODE_SORTABLE,
             'fields'      => array('dateOfBirth'),
             'flag'        => 7,
             'panelLayout' => 'filter;sort,search,limit'
@@ -47,7 +47,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
 	(
 		'fields'                  => array('lastname', 'firstname', 'guardian:tl_member.lastname', 'dateOfBirth'),
 		'showColumns'             => true,
-		'label_callback'          => array('tl_thtp_days', 'listDates')
+		'label_callback'          => array('tl_jungbuettel', 'addIcon')
 	),
         'global_operations' => array(
             'all' => array(
@@ -116,8 +116,10 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
 	),
 	'dateOfBirth' => array
 	(
-		'exclude'                 => true,
-		'inputType'               => 'text',
+		'default'                 => time(),
+		'sorting'                 => true,
+		'flag'                    => DataContainer::SORT_DAY_DESC,
+		'eval'                    => array('rgxp'=>'datim', 'doNotCopy'=>true),
 		'eval'                    => array('rgxp'=>'date', 'datepicker'=>true, 'tl_class'=>'w50 wizard'),
 		'sql'                     => "varchar(11) NOT NULL default ''"
 	),
@@ -165,19 +167,4 @@ class tl_jungbuettel extends Backend
 
         return $arrButtons;
     }
-}
-
-
-class tl_thtp_days extends Backend
-{
-
-	/**
-	 * List a particular record
-	 * @param array
-	 * @return string
-	 */
-	public function listDates($arrRow)
-	{
-		return date('d.m.Y',strtotime($arrRow['dateOfBirth']));
-	}
 }
