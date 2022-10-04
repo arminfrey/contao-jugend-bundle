@@ -117,7 +117,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
 		'default'                 => time(),
 		'sorting'                 => true,
 		'flag'                    => DataContainer::SORT_DAY_DESC,
-		'eval'                    => array('rgxp'=>'datim', 'doNotCopy'=>true),
+		'eval'                    => array('rgxp'=>'datim', 'doNotCopy'=>true, 'datepicker'=>true, 'feEditable'=>true, 'feViewable'=>true, 'tl_class'=>'w50 wizard'),
 		'sql'                     => "varchar(11) NOT NULL default ''"
 	),
         'gender' => array
