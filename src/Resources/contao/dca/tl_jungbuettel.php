@@ -15,6 +15,7 @@ declare(strict_types=1);
 use Contao\Backend;
 use Contao\DC_Table;
 use Contao\Input;
+use Contao\DataContainer;
 
 /**
  * Table tl_jungbuettel
