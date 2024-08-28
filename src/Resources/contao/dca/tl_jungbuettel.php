@@ -24,7 +24,7 @@ $GLOBALS['TL_DCA']['tl_jungbuettel'] = array(
 
     // Config
     'config'      => array(
-        'dataContainer'    => 'Table',
+        'dataContainer'    => DC_Table::class,
         'enableVersioning' => true,
         'sql'              => array(
             'keys' => array(
