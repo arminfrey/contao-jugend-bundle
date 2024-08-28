@@ -6,7 +6,7 @@
         "bundle",
         "tag 3",
         "tag 4",
-        "tag 5",
+        "tag 5"
     ],
     "type": "contao-bundle",
     "license": "GPL-3.0-or-later",
